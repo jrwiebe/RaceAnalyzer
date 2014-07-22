@@ -74,6 +74,7 @@ void RaceCaptureConfig::PopulateGpsConfig(Object &gpsRoot){
 		ChannelConfigFromJson(gpsConfig.latitudeCfg,gpsRoot["latitude"]);
 		ChannelConfigFromJson(gpsConfig.longitudeCfg,gpsRoot["longitude"]);
 		ChannelConfigFromJson(gpsConfig.speedCfg,gpsRoot["speed"]);
+		ChannelConfigFromJson(gpsConfig.dateCfg,gpsRoot["date"]);
 		ChannelConfigFromJson(gpsConfig.timeCfg,gpsRoot["time"]);
 		ChannelConfigFromJson(gpsConfig.satellitesCfg,gpsRoot["satellites"]);
 		ChannelConfigFromJson(gpsConfig.lapCountCfg,gpsRoot["lapCount"]);
@@ -298,6 +299,7 @@ Object RaceCaptureConfig::GpsConfigToJson(){
 	cfg["latitude"] = ChannelConfigToJson(gpsConfig.latitudeCfg);
 	cfg["longitude"] = ChannelConfigToJson(gpsConfig.longitudeCfg);
 	cfg["speed"] = ChannelConfigToJson(gpsConfig.speedCfg);
+	cfg["date"] = ChannelConfigToJson(gpsConfig.dateCfg);
 	cfg["time"]  = ChannelConfigToJson(gpsConfig.timeCfg);
 	cfg["satellites"] = ChannelConfigToJson(gpsConfig.satellitesCfg);
 	cfg["lapCount"] = ChannelConfigToJson(gpsConfig.lapCountCfg);

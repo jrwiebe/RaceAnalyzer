@@ -56,14 +56,16 @@ ChannelConfig * GpsConfigPanel::GetChannelConfig(int i){
 		case 2:
 			return &(cfg.speedCfg);
 		case 3:
-			return &(cfg.timeCfg);
+			return &(cfg.dateCfg);
 		case 4:
-			return &(cfg.satellitesCfg);
+			return &(cfg.timeCfg);
 		case 5:
-			return &(cfg.lapCountCfg);
+			return &(cfg.satellitesCfg);
 		case 6:
-			return &(cfg.lapTimeCfg);
+			return &(cfg.lapCountCfg);
 		case 7:
+			return &(cfg.lapTimeCfg);
+		case 8:
 			return &(cfg.splitTimeCfg);
 		default:
 			return NULL;

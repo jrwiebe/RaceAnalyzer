@@ -538,6 +538,7 @@ void RaceAnalyzerComm::readGpsConfig(GpsConfig *config){
 	populateChannelConfig(config->latitudeCfg,"lat",rsp);
 	populateChannelConfig(config->longitudeCfg,"long",rsp);
 	populateChannelConfig(config->speedCfg,"vel",rsp);
+	populateChannelConfig(config->dateCfg,"date",rsp);
 	populateChannelConfig(config->timeCfg,"time",rsp);
 	populateChannelConfig(config->satellitesCfg,"sats",rsp);
 }
@@ -728,6 +729,7 @@ void RaceAnalyzerComm::writeConfig(RaceCaptureConfig *config, RaceAnalyzerCommCa
 				cmd = AppendChannelConfig(cmd, cfg.latitudeCfg);
 				cmd = AppendChannelConfig(cmd, cfg.longitudeCfg);
 				cmd = AppendChannelConfig(cmd, cfg.speedCfg);
+				cmd = AppendChannelConfig(cmd, cfg.dateCfg);
 				cmd = AppendChannelConfig(cmd, cfg.timeCfg);
 				cmd = AppendChannelConfig(cmd, cfg.satellitesCfg);
 				wxString result = SendCommand(serialPort, cmd);

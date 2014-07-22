@@ -102,6 +102,7 @@ void ChannelSelectorPage::PopulateAvailableChannels(wxGrid *grid, RaceCaptureCon
 	AppendChannelItem(grid, &config->gpsConfig.latitudeCfg);
 	AppendChannelItem(grid, &config->gpsConfig.longitudeCfg);
 	AppendChannelItem(grid, &config->gpsConfig.timeCfg);
+	AppendChannelItem(grid, &config->gpsConfig.dateCfg);
 	AppendChannelItem(grid, &config->gpsConfig.speedCfg);
 
 	for (size_t i = 0; i < CONFIG_ANALOG_CHANNELS - 1; i++ ){

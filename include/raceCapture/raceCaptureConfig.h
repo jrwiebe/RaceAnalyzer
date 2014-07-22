@@ -233,6 +233,7 @@ public:
 	ChannelConfig latitudeCfg;
 	ChannelConfig longitudeCfg;
 	ChannelConfig timeCfg;
+	ChannelConfig dateCfg;
 	ChannelConfig speedCfg;
 };
 
